@@ -1,4 +1,4 @@
 module.exports = function isCommonSSR () {
-  // TODO: figure out a good default for most common SSR scenario.
+  // TODO: figure out a good default for Non-DoneJS SSR scenarios.
   return window.doneSsr;
 };

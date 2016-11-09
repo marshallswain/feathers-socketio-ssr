@@ -1,9 +1,9 @@
 {
   "name": "feathers-socketio-ssr",
   "description": "Switch feathers-socketio requests to use feathers-rest in a server environment",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "homepage": "https://github.com/feathersjs/feathers-socketio-ssr",
-  "main": "lib/",
+  "main": "lib/index",
   "keywords": [
     "feathers",
     "feathers-plugin"
@@ -61,9 +61,11 @@
     "chai": "^3.5.0",
     "feathers": "^2.0.2",
     "istanbul": "^1.1.0-alpha.1",
+    "jquery": "^3.1.1",
     "mocha": "^3.1.2",
     "rimraf": "^2.5.4",
-    "semistandard": "^9.1.0"
+    "semistandard": "^9.1.0",
+    "socket.io-client": "^1.5.1"
   },
   "peerDependencies": {
     "jquery": "*"

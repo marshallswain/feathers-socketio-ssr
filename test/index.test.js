@@ -2,10 +2,7 @@ const expect = require('chai').expect;
 const feathers = require('feathers/client');
 const socketio = require('../src');
 const isCommonSSR = require('../src/is-common-ssr');
-
-// import rest from 'feathers-rest/client';
 const io = require('socket.io-client');
-// import sio from 'steal-socket.io';
 const prepareServer = require('./server');
 
 global.window = {
