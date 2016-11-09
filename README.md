@@ -57,7 +57,7 @@ const isCustomEnvironment = function(){
 
 const feathersClient = feathers()
   // Use the plugin in a Feathers Client application
-  .configure(socketio(socket, isCustomEnvironment, rest('http://localhost:8080).superagent(sa)));
+  .configure(socketio(socket, isCustomEnvironment, rest('http://localhost:8080').superagent(sa)));
 
 module.exports = feathersClient;
 ```
