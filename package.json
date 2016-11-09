@@ -3,7 +3,7 @@
   "description": "Switch feathers-socketio requests to use feathers-rest in a server environment",
   "version": "0.0.2",
   "homepage": "https://github.com/feathersjs/feathers-socketio-ssr",
-  "main": "lib/",
+  "main": "lib/index",
   "keywords": [
     "feathers",
     "feathers-plugin"
