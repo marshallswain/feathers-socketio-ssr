@@ -56,10 +56,11 @@ describe('feathers-socketio-ssr', () => {
     return prepareServer().then(server => {
       global.window.doneSsr = false;
 
+      const isSsr = () => true;
       const url = 'http://localhost:8999';
       const socket = io(url);
       const feathersClient = feathers()
-        .configure(socketio(socket, () => true));
+        .configure(socketio(socket, isSsr()));
 
       expect(typeof feathersClient.rest).to.equal('function', 'Rest provider was setup correctly');
       expect(feathersClient.io).to.equal(undefined, 'socketio provider was not setup');
