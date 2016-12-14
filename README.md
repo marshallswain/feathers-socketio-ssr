@@ -57,13 +57,13 @@ const isCustomEnvironment = function(){
 
 const feathersClient = feathers()
   // Use the plugin in a Feathers Client application
-  .configure(socketio(socket, isCustomEnvironment, rest('http://localhost:8080').superagent(sa)));
+  .configure(socketio(socket, isCustomEnvironment(), rest('http://localhost:8080').superagent(sa)));
 
 module.exports = feathersClient;
 ```
 
 1. **socket** `{SocketIO}`: A SocketIO socket.
-2. **isSsrFn** `{Function}`: optional - allows passing custom logic to determine if the provider should switch from socketio to the alternateProvider.
+2. **isSsr** `{Boolean}`: optional - allows use of custom logic to determine if the provider should switch from socketio to the alternateProvider.
 3. **alternateProvider** `{FeathersProvider}`: optional - allows for customizing the provider that the SSR server will use.  If not passed, it will use `feathers-rest` configured for jQuery Ajax.  You must install jQuery separately.
 
 ## License
