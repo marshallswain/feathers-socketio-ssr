@@ -1,5 +1,7 @@
 const expect = require('chai').expect;
 const feathers = require('feathers/client');
+const rest = require('feathers-rest/client');
+const jQuery = require('jquery');
 const socketio = require('../src');
 const isCommonSSR = require('../src/is-common-ssr');
 const io = require('socket.io-client');
@@ -31,7 +33,7 @@ describe('feathers-socketio-ssr', () => {
       const url = 'http://localhost:8999';
       const socket = io(url);
       const feathersClient = feathers()
-        .configure(socketio(socket));
+        .configure(socketio(socket, null, rest(url).jquery(jQuery)));
 
       expect(typeof feathersClient.rest).to.equal('function', 'Rest provider was setup correctly');
       expect(feathersClient.io).to.equal(undefined, 'socketio provider was not setup');
@@ -45,7 +47,7 @@ describe('feathers-socketio-ssr', () => {
       const url = 'http://localhost:8999';
       const socket = io(url);
       const feathersClient = feathers()
-        .configure(socketio(socket));
+        .configure(socketio(socket, null, rest(url).jquery(jQuery)));
 
       expect(feathersClient.rest).to.equal(undefined, 'Rest provider was not setup');
       expect(feathersClient.io.io.uri).to.equal(url, 'socketio provider was setup correctly');
@@ -60,7 +62,7 @@ describe('feathers-socketio-ssr', () => {
       const url = 'http://localhost:8999';
       const socket = io(url);
       const feathersClient = feathers()
-        .configure(socketio(socket, isSsr()));
+        .configure(socketio(socket, isSsr(), rest(url).jquery(jQuery)));
 
       expect(typeof feathersClient.rest).to.equal('function', 'Rest provider was setup correctly');
       expect(feathersClient.io).to.equal(undefined, 'socketio provider was not setup');
