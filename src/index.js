@@ -9,5 +9,5 @@ module.exports = function init (socket, isSsr, customRest) {
   const url = socket.io.uri;
   const isSSR = typeof isSsr === 'boolean' ? isSsr : isCommonSSR();
 
-  return isSSR ? customRest || rest(url).jquery(require('jquery')) : socketio(socket);
+  return isSSR ? customRest : socketio(socket);
 };
