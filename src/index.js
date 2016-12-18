@@ -1,5 +1,4 @@
 const socketio = require('feathers-socketio/client');
-const rest = require('feathers-rest/client');
 const isCommonSSR = require('./is-common-ssr');
 
 module.exports = function init (socket, isSsr, customRest) {
