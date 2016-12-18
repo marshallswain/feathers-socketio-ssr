@@ -1,6 +1,5 @@
 const socketio = require('feathers-socketio/client');
 const rest = require('feathers-rest/client');
-const jQuery = require('jquery');
 const isCommonSSR = require('./is-common-ssr');
 
 module.exports = function init (socket, isSsr, customRest) {
@@ -10,5 +9,5 @@ module.exports = function init (socket, isSsr, customRest) {
   const url = socket.io.uri;
   const isSSR = typeof isSsr === 'boolean' ? isSsr : isCommonSSR();
 
-  return isSSR ? customRest || rest(url).jquery(jQuery) : socketio(socket);
+  return isSSR ? customRest || rest(url).jquery(require('jquery')) : socketio(socket);
 };
