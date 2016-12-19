@@ -1,5 +1,14 @@
 # Change Log
 
+## [v1.0.0](https://github.com/feathersjs/feathers-socketio-ssr/tree/v1.0.0) (2016-12-19)
+[Full Changelog](https://github.com/feathersjs/feathers-socketio-ssr/compare/v0.0.2...v1.0.0)
+
+**Merged pull requests:**
+
+- Remove jQuery from peerDependencies [\#3](https://github.com/feathersjs/feathers-socketio-ssr/pull/3) ([bertho-zero](https://github.com/bertho-zero))
+- Change isSsrFn to plain boolean. [\#2](https://github.com/feathersjs/feathers-socketio-ssr/pull/2) ([marshallswain](https://github.com/marshallswain))
+- clarify comment [\#1](https://github.com/feathersjs/feathers-socketio-ssr/pull/1) ([marshallswain](https://github.com/marshallswain))
+
 ## [v0.0.2](https://github.com/feathersjs/feathers-socketio-ssr/tree/v0.0.2) (2016-11-09)
 
 
