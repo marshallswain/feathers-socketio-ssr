@@ -66,8 +66,5 @@
     "rimraf": "^2.5.4",
     "semistandard": "^9.1.0",
     "socket.io-client": "^1.5.1"
-  },
-  "peerDependencies": {
-    "jquery": "*"
   }
 }
