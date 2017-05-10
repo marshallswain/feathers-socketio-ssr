@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "feathers-rest": "^1.5.2",
-    "feathers-socketio": "^1.4.2"
+    "feathers-socketio": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
